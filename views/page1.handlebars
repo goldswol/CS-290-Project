@@ -5,6 +5,29 @@
     font-family: "helvetica", sans-serif;
   }
 
+  #subpages {
+    border: 2px solid #222;
+    border-bottom: 0px solid #222;
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: left; /* Safari 6.1+ */
+    display: flex;
+    justify-content: left;
+  }
+
+  #subpages>button {
+    width: 15%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: 0px;
+    padding: 5px;
+    background-color: #dac; /* Pink */
+    color: #222;
+  }
+
+  #subpages>button:hover {
+    background-color: #fce; /* Lighter pink */
+  }
+
   #scrollbox {
     height: 100px;
     width: 250px;
@@ -12,6 +35,12 @@
     overflow: auto;
   }
 </style>
+
+<div id="subpages">
+  <button id="page1">Home Page</button>
+  <button id="page2">Unordered List</button>
+  <button id="page3">Form/Download</button>
+</div>
 
 <h1>This is page 1!</h1>
 <div id="scrollbox">
@@ -21,3 +50,16 @@ up. The good news is that line breaks in the code don't carry into the box,
 but the bad news is that there still aren't enough letters to fill the dang box.
 Seems like there are enough now!
 </div>
+
+<script type="text/javascript">
+  document.getElementById("page1").onclick = function () {
+    location.href = "http://flip3.engr.oregonstate.edu:42066/";
+  };
+  document.getElementById("page2").onclick = function () {
+    location.href = "http://flip3.engr.oregonstate.edu:42066/page2";
+  };
+  document.getElementById("page3").onclick = function () {
+    location.href = "http://flip3.engr.oregonstate.edu:42066/page3";
+  };
+  //This is for button interactions (maybe?), and probably the carousel
+</script>
