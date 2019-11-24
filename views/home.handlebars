@@ -18,13 +18,22 @@
     display: flex;
     justify-content: left;
   }
-  #subpages>div {
+  #subpages>button {
     width: 15%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: 2px solid #222;
+    padding: 5px;
+    background-color: #dac; /* Green */
+    color: #222;
+  }
+  #subpages>button:hover {
+    background-color: #FFF; /* Green */
   }
 </style>
 
 <div id="subpages">
-  <div id="page1">Page 1</div>
+  <button id="page1">Page 1</div>
   <div id="page2">Page 2</div>
   <div id="page3">Page 3</div>
 </div>
