@@ -12,6 +12,21 @@ app.get('/',function(req,res)
   res.render('home.handlebars');
 });
 
+app.get('/page1', function(req,res)
+{
+  res.render('page1.handlebars');
+});
+
+app.get('/page2', function(req,res)
+{
+  res.render('page2.handlebars');
+});
+
+app.get('/page3', function(req,res)
+{
+  res.render('page3.handlebars');
+});
+
 app.use(function(req,res){
   res.status(404);
   res.render('404.handlebars');
