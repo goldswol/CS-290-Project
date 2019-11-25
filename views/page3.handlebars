@@ -33,10 +33,13 @@
   <button id="page1">Home Page</button>
   <button id="page2">Scroll Box</button>
   <button id="page3">Picture Sources</button>
-  <button id="page4">Form/Downloads</button>
+  <button id="page4">Form/Download</button>
 </div>
 
 <h2>Form Entry and Downloads</h2>
+<h3>Form:</h3>
+<input type="text" id="formData">
+<button id="formSender">Send data</button>
 
 <script type="text/javascript">
   document.getElementById("page1").onclick = function () {
@@ -47,5 +50,16 @@
   };
   document.getElementById("page3").onclick = function () {
     location.href = "http://flip3.engr.oregonstate.edu:42066/page2";
+  };
+  document.getElemenyById("formSender").onclick = function () {
+    var req = new XMLHttpRequest();
+    var form = document.GetElementById("formData")
+
+    req.open("GET", payload, true);
+    req.addEventListener("load", function()
+    {
+      var response = JSON.parse(req.responseText);
+    }
+    console.log(response);
   };
 </script>
