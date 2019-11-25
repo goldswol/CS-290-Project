@@ -59,10 +59,5 @@
     var form = document.GetElementById("formData")
 
     req.open("GET", payload, true);
-    req.addEventListener("load", function()
-    {
-      var response = JSON.parse(req.responseText);
-    }
-    console.log(response);
   };
 </script>
